@@ -1,18 +1,20 @@
-import React from 'react'
+import React from "react";
+import { Name } from "./person.type";
 
 type persionListprops = {
-    names: {
-        first: string,
-        last: string,
-    }[]
-}
+  names: Name[];
+};
 
 export const PersonList = (props: persionListprops) => {
-    return (
-        <div>
-            {props.names.map((name) => {
-                return <h2>{name.first} {name.last}</h2>
-            })}
-        </div>
-    )
-}
+  return (
+    <div>
+      {props.names.map((name) => {
+        return (
+          <h2>
+            {name.first} {name.last}
+          </h2>
+        );
+      })}
+    </div>
+  );
+};
